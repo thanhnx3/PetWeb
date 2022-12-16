@@ -1,0 +1,11 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="modalDialog" closable="true" title="Edit Popup"
+		border="normal" apply="vnua.fita.controller.UpdatePetController">
+		<!-- Them cac truong thuoc tinh Pet -->
+		<vlayout>
+			<label id="msg"></label>
+			<button id="updatePetBtn" hflex="1" label="Update Pet" />
+		</vlayout>
+	</window>
+</zk>

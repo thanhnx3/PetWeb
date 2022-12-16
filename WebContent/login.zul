@@ -1,0 +1,40 @@
+<?page title="Đăng nhập" contentType="text/html;charset=UTF-8"?>
+<?link rel="stylesheet" type="text/css" href="/style.css"?>
+<zk>
+	<style>.z-button i { font-size: 24px; }</style>
+	<div align="center" style="margin-top:50px;" apply="vnua.fita.controller.LoginController">
+		<grid  width="40%" vflex="1">
+			<auxhead>
+				<auxheader colspan="2" label="Login Form"
+					style="font-size:16px" image="/img/user_icon.png" />
+			</auxhead>
+			<columns visible="false">
+				<column />
+				<column />
+			</columns>
+			<rows>
+				<row >
+					<!-- constraint="no empty" -->
+					User Name
+					<textbox id="username" hflex="1"
+						constraint="no empty: Nhập username" />
+				</row>
+				<row >
+					<!-- constraint="no empty" -->
+					Password
+					<textbox type ="password" id="password" hflex="1"
+						 />
+				</row>
+								<row spans="2" align="right">
+					<hlayout>
+						<label id ="errorMsg"></label>
+						<button id="resetButton" label="Reset" />
+						<button id="submitButton" label="Login"
+							/>
+					</hlayout>
+				</row>
+			</rows>
+		</grid>
+	</div>
+	
+</zk>

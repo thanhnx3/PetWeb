@@ -1,0 +1,13 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="modalDialog" closable="true" title="Add New Popup"
+		border="normal" apply="vnua.fita.controller.AddPetController">
+		<!-- Them cac truong thuoc tinh Pet -->
+		<image id="previewImage" />
+		Upload your hot shot:
+		<fileupload label="Upload"
+			onUpload="previewImage.setContent(event.media)" />
+		<button id="addPetBtn" hflex="1" label="Add Pet" />
+	</window>
+
+</zk>

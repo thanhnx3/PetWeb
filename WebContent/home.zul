@@ -1,0 +1,46 @@
+<?page title="Thứ cưng" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zk.ui.util.Composition"
+arg0="/template/layout.zul"?>
+<zk>
+	<vlayout self="@define(content)"
+		apply="vnua.fita.controller.HomeController">
+		<div height="50px" style="margin-top:20px;">
+			<label id="titleLabel" />
+		</div>
+		<listbox id="petListbox" mold="paging" pageSize="3"
+			emptyMessage="No pet found in the result" style="border: 0px;">
+			<template name="model">
+				<listitem>
+					<listcell>
+						<image src="${each.preview}" width="200px"  />
+					</listcell>
+					<listcell>
+						<vlayout hflex="1" style="line-height: 22px">
+							<label value="${each.name}" />
+							<label value="${each.description}" />
+							<label value="${each.price}" />
+							<label value="${each.type}" />
+							<label value="${each.male}" />
+							<label value="${each.color}" />
+							<label value="${each.size}" />
+						</vlayout>
+					</listcell>
+				</listitem>
+			</template>
+		</listbox>
+		<hlayout id="petDetail" style="margin-top:20px" width="100%"
+			visible="false">
+			<image id="previewImage" width="250px" />
+			<vlayout hflex="1">
+				<label id="namelLabel" />
+				<label id="descriptionLabel" />
+				<label id="priceLabel" />
+				<label id="typeLabel" />
+				<label id="maleLabel" />
+				<label id="colorLabel" />
+				<label id="sizeLabel" />
+				<a id="back" label="Back" />
+			</vlayout>
+		</hlayout>
+	</vlayout>
+</zk>
